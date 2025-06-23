@@ -17,7 +17,6 @@ def fetch_json():
         response.raise_for_status()  # Raise an error for HTTP codes 4xx/5xx
         json_content = response.json()
         save_to_file(json_content)
-        print("⚠️ Warning: SSL verification is disabled. This is not secure and should only be used for testing.")
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch JSON: {e}")
 
@@ -33,6 +32,5 @@ def save_to_file(content):
 
     print(f"✅ JSON content saved to {filename}")
 
-# Replace aiohttp with requests for synchronous fetching
 if __name__ == "__main__":
     fetch_json()
