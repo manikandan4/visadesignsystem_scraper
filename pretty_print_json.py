@@ -1,10 +1,10 @@
 import json
 
 # Path to the input JSON file
-input_file_path = "test_output/nova-react-2.5.4.json"
+input_file_path = "input/nova-react-2.5.4.json"
 
 # Path to the output JSON file
-output_file_path = "output/pretty_printed.json"
+output_file_path = "input/pretty_printed.json"
 
 # Read and parse the JSON file
 with open(input_file_path, 'r') as file:
